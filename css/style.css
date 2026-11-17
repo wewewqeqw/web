@@ -1,5 +1,7 @@
+/* ===== 0. reset + 기본 ===== */
 html {
     font-size: 62.5%;
+    /* 1rem = 10px */
 }
 
 * {
@@ -8,7 +10,8 @@ html {
     box-sizing: border-box;
 }
 
-ul {
+ul,
+ol {
     list-style: none;
 }
 
@@ -19,8 +22,9 @@ a {
 
 body {
     font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.6rem;
     color: #333333;
-    background-color: #F5F3FF;
+    background-color: #f5f3ff;
 }
 
 h1,
@@ -28,4 +32,588 @@ h2,
 h3 {
     font-family: "Do Hyeon", sans-serif;
     font-weight: normal;
+}
+
+.inner,
+main {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+h2 {
+    margin: 6rem 0 2.4rem;
+    font-size: 3rem;
+    color: #1e1b4b;
+}
+
+/* ===== 1. header ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 2.4rem 0;
+    color: #ffffff;
+}
+
+.scroll header {
+    background: #000000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .9) 0%, rgba(0, 0, 0, 0.05) 100%);
+    backdrop-filter: blur(4px);
+}
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 132rem;
+}
+
+.logo {
+    font-size: 2.8rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.8rem;
+}
+
+nav a:hover {
+    color: #ffd45c;
+}
+
+/* ===== 2. hero (Swiper 적용) ===== */
+.hero {
+    position: relative;
+    height: 52rem;
+    color: #ffffff;
+    background-color: #1e1b4b;
+    overflow: hidden;
+}
+
+.hero-slider {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+    max-width: 52rem;
+}
+
+/* 슬라이드 배경 이미지 설정 */
+.hero .swiper-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.hero-sl-1 {
+    background-image: url(/img/집.png);
+}
+
+.hero-sl-2 {
+    background-image: url(/img/액션배경.png);
+}
+
+.hero-sl-3 {
+    background-image: url(/img/판타지배경.png);
+}
+
+.sub {
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    font-size: 1.3rem;
+    color: #c7c2ff;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 5.2rem;
+    color: #ffffff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    border-radius: 3rem;
+    background-color: #ffd45c;
+    color: #1e1b4b;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+}
+
+/* 히어로 슬라이드 하단 버튼 및 막대형 페이지네이션 영역 */
+.hero .btn-wrap {
+    position: absolute;
+    bottom: calc(50% - 170px);
+    left: calc(50% - 60rem);
+    display: flex;
+    justify-content: flex-start;
+    z-index: 3;
+    align-items: flex-end;
+    gap: 2rem;
+    padding: 0 4rem;
+}
+
+.hero .btn-wrap > div {
+    position: static;
+    width: auto;
+}
+
+.hero .swiper-pagination-bullets {
+    height: auto;
+}
+
+.hero .swiper-pagination-bullet {
+    background-color: #fff;
+    border-radius: 0;
+    height: 3px;
+    opacity: 0.5;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.hero .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 30px;
+    opacity: 1;
+}
+
+.hero .btn-wrap > div.arrow {
+    width: 3.3rem;
+    height: 2.3rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.hero .btn-wrap > div.arrow svg {
+    display: none;
+}
+
+.hero .arrow.swiper-button-next {
+    background-image: url(../img/arr-next.svg);
+}
+
+.hero .arrow.swiper-button-prev {
+    background-image: url(../img/arr-prev.svg);
+}
+
+/* ===== 3. 프로필 ===== */
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    margin-top: -6rem;
+    padding: 2.8rem 3.2rem;
+    border-radius: 1.6rem;
+    background-color: #ffffff;
+    z-index: 3;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.6rem;
+    height: 9.6rem;
+    border-radius: 50%;
+    background-color: #ede9fe;
+    font-size: 5.2rem;
+}
+
+.intro {
+    flex: 1;
+}
+
+.intro h3 {
+    margin-bottom: 0.6rem;
+    font-size: 2.4rem;
+    color: #1e1b4b;
+}
+
+.tags {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.tags li {
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+    background-color: #ede9fe;
+    color: #5b4bd6;
+    font-size: 1.4rem;
+}
+
+/* ===== 4. 최신 글 ===== */
+.post {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 2.4rem;
+    padding: 2rem;
+    border-radius: 1.6rem;
+    background-color: #ffffff;
+}
+
+.post:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.thumb {
+    position: relative;
+    flex-shrink: 0;
+    width: 40rem;
+    height: 22rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    background-color: #1e1b4b;
+}
+
+.thumb .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s;
+}
+
+.post:nth-of-type(1) .bg {
+    background-image: url(/img/원피스.png);
+}
+
+.post:nth-of-type(2) .bg {
+    background-image: url(/img/나루토.png);
+}
+
+.post:nth-of-type(3) .bg {
+    background-image: url(/img/블리치.png);
+}
+
+.post:hover .bg {
+    transform: scale(1.1);
+}
+
+.date {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    z-index: 1;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    background-color: #ffd45c;
+    color: #1e1b4b;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.cate {
+    color: #7c6cf2;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.info h3 {
+    font-size: 2.4rem;
+    color: #1e1b4b;
+}
+
+.more {
+    border-bottom: 2px solid #7c6cf2;
+    color: #7c6cf2;
+    font-weight: bold;
+}
+
+.more:hover {
+    color: #1e1b4b;
+    border-color: #1e1b4b;
+}
+
+/* ===== 가이드 (탭) ===== */
+.guide-tabs {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2.4rem;
+}
+
+.guide-tabs button {
+    padding: 1rem 2.4rem;
+    border: none;
+    border-radius: 3rem;
+    background-color: #ffffff;
+    color: #5b4bd6;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.guide-tabs li.on button {
+    background-color: #1e1b4b;
+    color: #ffffff;
+}
+
+.guide-content {
+    display: flex;
+    gap: 1.6rem;
+    height: 30rem;
+}
+
+.guide-content li {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.2rem;
+    padding: 2.4rem;
+    border-radius: 1.6rem;
+    background-color: #ede9fe;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.4s, background-color 0.4s;
+}
+
+.guide-content .num {
+    position: absolute;
+    top: 2rem;
+    right: 2.4rem;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 3.2rem;
+    color: #c7c2ff;
+}
+
+.guide-content .badge {
+    position: absolute;
+    top: 2rem;
+    left: 2.4rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+    background-color: #ffd45c;
+    color: #1e1b4b;
+    font-size: 1.3rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-1rem);
+    transition: 0.4s;
+}
+
+.guide-content .thumb {
+    width: auto;
+    height: auto;
+    background: none;
+    font-size: 6.4rem;
+    opacity: 0;
+    transform: scale(0.6);
+    transition: 0.4s;
+}
+
+.guide-content h3 {
+    font-size: 2.4rem;
+    color: #1e1b4b;
+}
+
+.guide-content p {
+    font-size: 1.4rem;
+    color: #5b4bd6;
+}
+
+.guide-content li p {
+    display: none;
+}
+
+.guide-content li.on p {
+    display: block;
+}
+
+.guide-content li.on {
+    flex: 2.2;
+    background-color: #1e1b4b;
+}
+
+.guide-content li:nth-child(1) {
+    background-image: url(../img/배틀.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.guide-content li:nth-child(2) {
+    background-image: url(../img/세계.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.guide-content li:nth-child(3) {
+    background-image: url(../img/스릴.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.guide-content li:nth-child(4) {
+    background-image: url(../img/운명.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.guide-content li.on .badge,
+.guide-content li.on .thumb {
+    opacity: 1;
+    transform: none;
+}
+
+.guide-content li.on h3 {
+    color: #ffffff;
+}
+
+.guide-content li.on p {
+    color: #c7c2ff;
+}
+
+.guide-content li.on .num {
+    color: #ffd45c;
+}
+
+/* ===== 5. 사진첩 ===== */
+.photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 16rem 16rem;
+    grid-template-areas:
+        "p1 p1 p2 p3"
+        "p4 p5 p5 p3";
+    gap: 1.6rem;
+}
+
+.p1 {
+    grid-area: p1;
+    background-image: url(../img/액션.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.p2 {
+    grid-area: p2;
+    background-image: url(../img/판타지.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.p3 {
+    grid-area: p3;
+    background-image: url(../img/추리.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.p4 {
+    grid-area: p4;
+    background-image: url(../img/순정.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.p5 {
+    grid-area: p5;
+    background-image: url(../img/일상.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.photos li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    border-radius: 1.2rem;
+    background-color: #1e1b4b;
+    color: #ffffff;
+    transition: transform 0.3s;
+}
+
+.photos li:hover {
+    transform: translateY(-0.6rem);
+}
+
+.photos span {
+    font-size: 4.8rem;
+}
+
+/* ===== 6. footer + TOP ===== */
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 8rem;
+    padding: 3rem 4rem;
+    background-color: #1e1b4b;
+    color: #c7c2ff;
+    font-size: 1.3rem;
+}
+
+.top {
+    position: fixed;
+    right: 2.4rem;
+    bottom: 2.4rem;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    background-color: #7c6cf2;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(3rem);
+    transition: 0.3s;
+}
+
+body.scroll .top {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mob-nav-btn {
+    display: none;
 }
