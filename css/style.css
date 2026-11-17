@@ -120,15 +120,15 @@ nav a:hover {
 }
 
 .hero-sl-1 {
-    background-image: url(/img/집.png);
+    background-image: url(../img/hero-img-1.png);
 }
 
 .hero-sl-2 {
-    background-image: url(/img/액션배경.png);
+    background-image: url(../img/hero-img-2.png);
 }
 
 .hero-sl-3 {
-    background-image: url(/img/판타지배경.png);
+    background-image: url(../img/hero-img-3.png);
 }
 
 .sub {
@@ -299,15 +299,15 @@ nav a:hover {
 }
 
 .post:nth-of-type(1) .bg {
-    background-image: url(/img/원피스.png);
+    background-image: url(../img/post-img-1.png);
 }
 
 .post:nth-of-type(2) .bg {
-    background-image: url(/img/나루토.png);
+    background-image: url(../img/post-img-2.png);
 }
 
 .post:nth-of-type(3) .bg {
-    background-image: url(/img/블리치.png);
+    background-image: url(../img/post-img-3.png);
 }
 
 .post:hover .bg {
@@ -461,28 +461,28 @@ nav a:hover {
 }
 
 .guide-content li:nth-child(1) {
-    background-image: url(../img/배틀.png);
+    background-image: url(../img/guide-img-1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .guide-content li:nth-child(2) {
-    background-image: url(../img/세계.png);
+    background-image: url(../img/guide-img-2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .guide-content li:nth-child(3) {
-    background-image: url(../img/스릴.png);
+    background-image: url(../img/guide-img-3.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .guide-content li:nth-child(4) {
-    background-image: url(../img/운명.png);
+    background-image: url(../img/guide-img-4.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -519,7 +519,7 @@ nav a:hover {
 
 .p1 {
     grid-area: p1;
-    background-image: url(../img/액션.png);
+    background-image: url(../img/photo-img-1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -527,7 +527,7 @@ nav a:hover {
 
 .p2 {
     grid-area: p2;
-    background-image: url(../img/판타지.png);
+    background-image: url(../img/photo-img-2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -535,7 +535,7 @@ nav a:hover {
 
 .p3 {
     grid-area: p3;
-    background-image: url(../img/추리.png);
+    background-image: url(../img/photo-img-3.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -543,7 +543,7 @@ nav a:hover {
 
 .p4 {
     grid-area: p4;
-    background-image: url(../img/순정.png);
+    background-image: url(../img/photo-img-4.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -551,7 +551,7 @@ nav a:hover {
 
 .p5 {
     grid-area: p5;
-    background-image: url(../img/일상.png);
+    background-image: url(../img/photo-img-5.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
