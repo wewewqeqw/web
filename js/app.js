@@ -81,3 +81,29 @@ mNavBtn.addEventListener('click', (e) => {
     e.preventDefault()
     body.classList.toggle('m-nav-open')
 })
+const animateElements = document.querySelectorAll('.post, #guides, .photos li, .profile');
+
+animateElements.forEach(el => {
+    el.classList.add('animate-el');
+});
+
+const observerOptions = {
+    root: null,
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // 화면에 들어오면 애니메이션 실행 (active 추가)
+            entry.target.classList.add('active');
+        } else {
+            // 화면에서 완전히 벗어나면 클래스를 제거해서, 나중에 다시 스크롤할 때 또 애니메이션이 실행되게 함!
+            entry.target.classList.remove('active');
+        }
+    });
+}, observerOptions);
+
+animateElements.forEach(el => {
+    observer.observe(el);
+});

@@ -193,25 +193,8 @@ nav a:hover {
     opacity: 1;
 }
 
-.hero .btn-wrap > div.arrow {
-    width: 3.3rem;
-    height: 2.3rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    cursor: pointer;
-}
-
 .hero .btn-wrap > div.arrow svg {
     display: none;
-}
-
-.hero .arrow.swiper-button-next {
-    background-image: url(../img/arr-next.svg);
-}
-
-.hero .arrow.swiper-button-prev {
-    background-image: url(../img/arr-prev.svg);
 }
 
 /* ===== 3. 프로필 ===== */
@@ -439,7 +422,7 @@ nav a:hover {
 
 .guide-content h3 {
     font-size: 2.4rem;
-    color: #1e1b4b;
+    color: #7c6cf2;
 }
 
 .guide-content p {
@@ -616,4 +599,92 @@ body.scroll .top {
 
 .mob-nav-btn {
     display: none;
+}
+
+.animate-el {
+    opacity: 0;
+    transform: translateY(60px);  
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.animate-el.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.hero .swiper-button-next,
+.hero .swiper-button-prev {
+    background-image: none !important;
+    background-color: rgba(30, 27, 75, 0.7) !important;
+    width: 4.8rem !important;
+    height: 4.8rem !important;
+    border-radius: 50% !important;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero .swiper-button-next:hover,
+.hero .swiper-button-prev:hover {
+    background-color: #7c6cf2 !important;
+    transform: scale(1.1);
+}
+
+.hero .swiper-button-next::after {
+    content: '❯' !important;
+    font-size: 1.8rem !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+.hero .swiper-button-prev::after {
+    content: '❮' !important;
+    font-size: 1.8rem !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+.hero .swiper-button-next::before,
+.hero .swiper-button-prev::before {
+    display: none !important;
+}
+.hero .swiper-button-next,
+.hero .swiper-button-prev {
+    background-image: none !important;
+    background-color: rgba(30, 27, 75, 0.7) !important;
+    width: 4.8rem !important;
+    height: 4.8rem !important;
+    border-radius: 50% !important;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero .swiper-button-next:hover,
+.hero .swiper-button-prev:hover {
+    background-color: #7c6cf2 !important;
+    transform: scale(1.1);
+}
+
+/* Swiper 기본 화살표 아이콘을 끄고 우리가 원하는 꺾쇠만 출력 */
+.hero .swiper-button-next::after {
+    content: '❯' !important;
+    font-size: 1.8rem !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+.hero .swiper-button-prev::after {
+    content: '❮' !important;
+    font-size: 1.8rem !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+/* 겹침을 유발하는 Swiper 내부 가상 요소 및 SVG 완전 숨김 */
+.hero .swiper-button-next::before,
+.hero .swiper-button-prev::before,
+.hero .swiper-button-next svg,
+.hero .swiper-button-prev svg {
+    display: none !important;
 }
